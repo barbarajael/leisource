@@ -1,7 +1,5 @@
 # Lei Source
 
-***
-
 Projects for the course of **Technologies and Web Programming** @ DETI-UA [2017].
 - first one is a simple website single page
 - second one uses Django
