@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="author" content="Bárbara, Catarina, Miriam">
+		<meta name="keyword" content="TPW, Proj1, Web, Responsive, Bootstrap, jQuery">
+		<title>LEI Source</title>
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		
+		<!-- Costum CSS -->
+		<link rel="stylesheet" href="../css/style.css">
+
+		<!-- font-awesome icons -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	</head>
+	
+	<body>
+		<!-- Menu Navbar -->
+		<div id="menu-navbar"> </div>
+		<!-- Content -->
+		<div id="wrapper"> </div>
+
+
+
+		<div id="homecontainer" class="home">
+		<!-- Home Page -->
+			<div id="homeText">
+                <img src="../imgs/leisource2.png">
+				<h1 class="display-3">Lei Source </h1>
+				<p>O nosso site aqui só para ti ;)</p>
+				<button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#loginForm">Entrar</button>
+			</div>
+		</div> 
+		
+
+		<!-- MODAL Login -->
+		<div class="modal fade" id="loginForm">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Header -->
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h5 class="modal-title">Lei Source</h5>
+					</div>
+					
+					<!-- Body (form) -->
+					<div class="modal-body">
+						<form role="form" id="form" action="templates/main.html">
+							<!-- EMAIL -->
+							<div class="form-group">
+								<input id="LOGemail" type="email" class="form-control" placeholder="example@ua.pt" required>
+							</div>
+
+							<!-- PASS -->
+							<div class="form-group">
+								<input id="LOGpass" type="password" class="form-control" placeholder="Password" required>
+							</div>
+
+							<div class="form-group">
+								<input class="btn btn-success btn-block" id="LOGsignBtn" type="button" value="Entrar">	
+							</div>
+						</form>
+					</div>
+					
+					<!-- Footer -->
+					<div class="modal-footer">
+						<h6>Não tens uma conta? <a role="button" id="createAccBtn">Inscreve-te</a></h6>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- MODAL Create Account -->
+		<div class="modal fade" id="createAccForm">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Header -->
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h5 class="modal-title">Criar conta</h5>
+					</div>
+					
+					<!-- Body (form) -->
+					<div class="modal-body">
+						<form role="form" id="form">
+							<!-- NOME -->
+							<div class="form-group">
+								<label class="col-sm-2 control-label">Nome:</label>
+          						<div class="col-sm-10 marginCA">
+          							<input id="CAname" type="text" class="form-control" placeholder="Primeiro e Ultimo nome (min 5 letras)">
+          						</div>
+          					</div>
+
+
+							<!-- EMAIL -->
+							<div class="form-group">
+								<label class="col-sm-2 control-label">E-mail:</label>
+          						<div class="col-sm-10 marginCA">
+          							<input id="CAemail" type="email" class="form-control" placeholder="example@ua.pt">
+          						</div>
+							</div>
+
+
+							<!-- PASS -->
+							<div class="form-group">
+								<label class="col-sm-2 control-label">Password:</label>
+          						<div class="col-sm-10 marginCA">
+									<input id="CApass" type="password" class="form-control" placeholder="Password (min 6 carateres)">
+          						</div>
+							</div>
+
+
+							<!-- CONFIRMAR PASS -->
+							<div class="form-group">
+								<label class="col-sm-2 control-label">Confirmar password:</label>
+          						<div class="col-sm-10 marginCA">
+									<input id="CApass2" type="password" class="form-control" placeholder="Confirmar password">
+          						</div>
+							</div>
+
+
+							<div class="form-group">
+								<span><br></span>
+								<input class="btn btn-success btn-block" id="CAcreateBtn" type="button" value="Criar">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+			
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="../js/jquery-1.10.2.min.js"></script>
+		
+		<!-- Costum jQuery -->
+		<script src="../js/main.js"></script>
+
+		<!-- Plugins -->
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/jquery.validate.min.js"></script>
+	</body>
+</html>

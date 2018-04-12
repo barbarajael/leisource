@@ -1,0 +1,68 @@
+<div id="wrapper" class="wrapperclass">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li onclick="goPagInicial();">
+                <span class="fa fa-home"></span> Página Inicial
+            </li>
+            <li onclick="goPerfil();">
+                <span class="fa fa-vcard"></span> Perfil
+            </li>
+            <li style="cursor: not-allowed">
+                <span class="fa fa-graduation-cap"></span> Disciplinas
+                <ul class="nav nav-second-level">
+                    <li onclick="goDiscl1();">1ºano</li>
+                    <li onclick="goDiscl2();">2ºano</li>
+                    <li onclick="goDiscl3();">3ºano</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="page-content-wrapper">
+        <!-- Body (form) -->
+        <form role="form" onsubmit="return false">
+            <!-- NOME -->
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Nome:</label>
+                <div class="col-sm-10 marginCA">
+                    <input id="CAname" type="text" class="form-control">
+                </div>
+            </div>
+
+
+            <!-- EMAIL -->
+            <div class="form-group">
+                <label class="col-sm-2 control-label">E-mail:</label>
+                <div class="col-sm-10 marginCA">
+                    <input id="CAemail" type="email" class="form-control" disabled>
+                </div>
+            </div>
+
+
+            <!-- PASS -->
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Password:</label>
+                <div class="col-sm-10 marginCA">
+                    <input id="CApass" type="password" class="form-control" placeholder="Password (min 6 carateres)">
+                </div>
+            </div>
+
+
+            <!-- CONFIRMAR PASS -->
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Confirmar password:</label>
+                <div class="col-sm-10 marginCA">
+                    <input id="CApass2" type="password" class="form-control" placeholder="Confirmar password">
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <span><br><br><br></span>
+                <input class="btn btn-success btn-block" id="CAcreateBtn" type="button" value="Guardar" onclick="validateCA(false)">
+            </div>
+        </form>
+    </div>
+</div>

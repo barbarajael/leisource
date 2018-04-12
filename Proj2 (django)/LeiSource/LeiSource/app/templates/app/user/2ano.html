@@ -1,0 +1,20 @@
+<div id="2AnoTitulo">
+	<h2>2º Ano</h2>
+</div>
+
+<br/>
+
+<div class="list-group">
+
+    {% for disc in disciplinas %}
+	    <a href="#" class="list-group-item list-group-item-action" onclick="goCadeira('{{ disc.abreviatura }}')">
+            <button type="button" class="btn btn-success" style="margin:5px">
+                <span class="fa fa-download right"></span>
+            </button>
+
+            <span>{{ disc.nome }}</span>
+            <span class="fa fa-file-text right" title="Existem Ficheiros" style="display: none"></span>
+        </a>
+    {% endfor %}
+
+</div>

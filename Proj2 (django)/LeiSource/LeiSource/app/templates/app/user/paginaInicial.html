@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="author" content="Bárbara, Catarina, Miriam">
+		<meta name="keyword" content="TPW, Proj1, Web, Responsive, Bootstrap, jQuery">
+		<title>LEI Source</title>
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="../../static/app/content/bootstrap.min.css">
+		
+		<!-- Costum CSS -->
+		<link rel="stylesheet" href="../../static/app/content/style.css">
+
+		<!-- font-awesome icons -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+    <body>
+        <!-- Menu Navbar -->
+        <div id="menu-navbar">
+            <nav class="navbar navbar-light bg-faded navbar-fixed-top" style="border: 1px solid #e7e7e7;">
+                <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#menuNavbar"></button>
+                <a class="navbar-left"><img src="../../static/app/imgs/leisource2.png" height="47" align="left"/></a>
+                <a class="navbar-brand" style="padding-top:9px; color: #8b908b;">&nbsp;&nbsp;LEI Source</a>
+        
+                <div class="collapse navbar-toggleable-xs" id="menuNavbar">
+                    <ul class="nav navbar-nav pull-sm-right">                       
+                        <li class="nav-item">
+                            <b><a class="nav-link" style="padding-top:11px">
+                                {{request.user.username}}
+                            </a></b>
+                        </li>
+                        <li class="nav-item" style="padding-top:5px" onclick="location.href = '/'">
+                            <button id="sair" type="button" class="btn btn-success" >
+                                <span class="fa fa-sign-out"></span>Sair
+                            </button>
+                        </li>
+                    </ul>                   
+                </div>
+            </nav>           
+        </div>
+
+        <!-- Sidebar -->
+        <div id="wrapper" class="wrapperclass">
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li onclick="location.href = '/userInicial'">
+                        <span class="fa fa-home"></span> Página Inicial
+                    </li>
+                    <li onclick="location.href = '/userPerfil'">
+                        <span class="fa fa-vcard"></span> Perfil
+                    </li>
+                    <li style="cursor: not-allowed">
+                        <span class="fa fa-graduation-cap"></span> Disciplinas
+                        <ul class="nav nav-second-level">
+                            <li onclick="goDisc(1)">1ºano</li>
+                            <li onclick="goDisc(2)">2ºano</li>
+                            <li onclick="goDisc(3)">3ºano</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="page-content-wrapper"> 
+		        <!-- Carousel -->
+		        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+			        <ol class="carousel-indicators">
+				        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				        <li data-target="#myCarousel" data-slide-to="1"></li>
+				        <li data-target="#myCarousel" data-slide-to="2"></li>
+			        </ol>
+		
+			        <div class="carousel-inner" role="listbox" align="center" style="height: 200px;">
+				        <div class="carousel-item active">
+					        <a href="https://www.facebook.com/detiuaveiro/" target="_blank"> 
+						        <img src="../../static/app/imgs/deti_fb.png">
+					        </a>
+				        </div>
+				
+				        <div class="carousel-item">
+					        <a href="https://www.ua.pt/deti/" target="_blank"> 
+						        <img src="../../static/app/imgs/deti_logo.png" alt="Second slide">
+					        </a>
+				        </div>
+				
+				        <div class="carousel-item">
+					        <a href="https://www.ua.pt/" target="_blank"> 
+						        <img src="../../static/app/imgs/ua.png" alt="Second slide">
+					        </a>
+				        </div>
+			        </div>
+			
+			        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="background:none !important">
+				        <span class="icon-prev" aria-hidden="true"></span>
+				        <span class="sr-only">Previous</span>
+			        </a>
+	  
+			        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="background:none !important">
+				        <span class="icon-next" aria-hidden="true"></span>
+				        <span class="sr-only">Next</span>
+			        </a>
+		        </div>
+		
+		        <!-- Texto -->
+		        <div id="myCard" style="padding-top: 50px">
+			        <h5 align="center">
+				        Partilha de conteúdos das disciplinas do curso de Engenharia Informática da Universidade de Aveiro
+			        </h5>
+		        </div>
+		
+		        <!-- Novos apontamentos  -->
+		        <div id="myGroupCards" style="padding-top: 90px">
+			        <div class="row">
+				        <div class="col-sm-6">
+					        <div class="card">
+						        <div class="card-block">
+							        <h3 class="card-title">ALGA - Novos apontamentos!</h3>
+							        <a href="#" class="btn btn-success" onclick="goCadeira('alga')">Ver</a>
+						        </div>
+					        </div>
+				        </div>
+	  
+				        <div class="col-sm-6">
+					        <div class="card">
+						        <div class="card-block">
+							        <h3 class="card-title">TPW - Novos apontamentos!</h3>
+							        <a href="#" class="btn btn-success" onclick="goCadeira('tpw')">Ver</a>
+						        </div>
+					        </div>
+				        </div>
+			        </div>
+		        </div>
+	        </div>
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src=".../../static/app/scripts/jquery-1.10.2.min.js"></script>
+		
+		<!-- Costum jQuery -->
+		<script src="../../static/app/scripts/main.js"></script>
+
+		<!-- Plugins -->
+		<script src="../../static/app/scripts/bootstrap.min.js"></script>
+		<script src="../../static/app/scripts/jquery.validate.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="author" content="Bárbara, Catarina, Miriam">
+		<meta name="keyword" content="TPW, Proj1, Web, Responsive, Bootstrap, jQuery">
+		<title>LEI Source</title>
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="../../static/app/content/bootstrap.min.css">
+		
+		<!-- Costum CSS -->
+		<link rel="stylesheet" href="../../static/app/content/style.css">
+
+		<!-- font-awesome icons -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+    <body>
+        <!-- Menu Navbar -->
+        <div id="menu-navbar">
+            <nav class="navbar navbar-light bg-faded navbar-fixed-top" style="border: 1px solid #e7e7e7;">
+                <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#menuNavbar"></button>
+                <a class="navbar-left"><img src="../../static/app/imgs/leisource2.png" height="47" align="left"/></a>
+                <a class="navbar-brand" style="padding-top:9px; color: #8b908b;">&nbsp;&nbsp;LEI Source</a>
+        
+                <div class="collapse navbar-toggleable-xs" id="menuNavbar">
+                    <ul class="nav navbar-nav pull-sm-right">                       
+                        <li class="nav-item">
+                            <b><a class="nav-link" style="padding-top:11px">
+                                {{request.user.username}}
+                            </a></b>
+                        </li>
+                        <li class="nav-item" style="padding-top:5px" onclick="location.href = '/'">
+                            <button id="sair" type="button" class="btn btn-success" >
+                                <span class="fa fa-sign-out"></span>Sair
+                            </button>
+                        </li>
+                    </ul>                   
+                </div>
+            </nav>           
+        </div>
+
+        <!-- Sidebar -->
+        <div id="wrapper" class="wrapperclass">
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li onclick = "location.href = '/userInicial'">
+                        <span class="fa fa-home"></span> Página Inicial
+                    </li>
+                    <li onclick="location.href = '/userPerfil'">
+                        <span class="fa fa-vcard"></span> Perfil
+                    </li>
+                    <li style="cursor: not-allowed">
+                        <span class="fa fa-graduation-cap"></span> Disciplinas
+                        <ul class="nav nav-second-level">
+                            <li onclick="goDisc(1)">1ºano</li>
+                            <li onclick="goDisc(2)">2ºano</li>
+                            <li onclick="goDisc(3)">3ºano</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="page-content-wrapper">
+                <!-- Body (form) -->
+                <form role="form" onsubmit="return false">
+                    <!-- NOME -->
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Nome:</label>
+                        <div class="col-sm-10 marginCA">
+                            <input id="CAname" type="text" class="form-control" placeholder="{{request.user.username}}">
+                        </div>
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">E-mail:</label>
+                        <div class="col-sm-10 marginCA">
+                            <input id="CAemail" type="email" class="form-control" placeholder="{{request.user.email}}" disabled>
+                        </div>
+                    </div>
+
+
+                    <!-- PASS -->
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Password:</label>
+                        <div class="col-sm-10 marginCA">
+                            <input id="CApass" type="password" class="form-control" placeholder="Password (min 8 carateres)">
+                        </div>
+                    </div>
+
+
+                    <!-- CONFIRMAR PASS -->
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Confirmar password:</label>
+                        <div class="col-sm-10 marginCA">
+                            <input id="CApass2" type="password" class="form-control" placeholder="Confirmar password">
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <span><br><br><br></span>
+                        <input class="btn btn-success btn-block" id="CAcreateBtn" type="button" value="Guardar" onclick="validateCA(false)">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src=".../../static/app/scripts/jquery-1.10.2.min.js"></script>
+		
+		<!-- Costum jQuery -->
+		<script src="../../static/app/scripts/main.js"></script>
+
+		<!-- Plugins -->
+		<script src="../../static/app/scripts/bootstrap.min.js"></script>
+		<script src="../../static/app/scripts/jquery.validate.min.js"></script>
+	</body>
+</html>

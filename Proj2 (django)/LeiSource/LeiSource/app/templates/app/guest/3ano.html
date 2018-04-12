@@ -1,0 +1,17 @@
+<div id="3AnoTitulo">
+	<h2>3º Ano</h2>
+</div>
+
+<br/>
+
+<div id="listCad3" class="list-group">
+    {% for d in discip3 %}
+	<a class="list-group-item list-group-item-action">
+		<button type="button" class="btn btn-success" style="margin: 5px"> 
+            <span class="fa fa-laptop"></span>
+        </button>
+		<span>{{ d.nome }}</span>
+	</a>
+    {% endfor %}
+</div>
+

@@ -1,0 +1,20 @@
+<div id="listName">
+	<h2 style="margin: 0; display: inline-block">Utilizadores registados</h2>
+
+    <button type="button" class="btn btn-success" style="float: right" onclick="location.href = '/admin/app/utilizador'"> 
+        Editar
+    </button>
+</div>
+
+<br/>
+
+<div id="listUsers" class="list-group">
+    {% for user in users %}
+	    <a class="list-group-item list-group-item-action">
+		    <button type="button" class="btn btn-success" style="margin: 5px"> 
+                <span class="fa fa-user-o"></span>
+            </button>
+		    <span>{{ user.nome }} , {{ user.mail }}</span>
+	    </a>
+    {% endfor %}
+</div>
